@@ -1,0 +1,6 @@
+1_6_Did the accused perpetrate intentional infringement of copyright?_intentional infringement,infringement,copyright,commit
+2_6_Did the accused encourage infringement of copyright?_infringement,encourage,support,copyright
+1.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
+2.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
+2.2_8_Was the accused aware of use of infringed copy of a computer program?_know,knew,use,infringed copy,copy,computer program,program,aware
+3_8_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?_tools,machinery,machine,plates,possess,use,infringed copies,copy
