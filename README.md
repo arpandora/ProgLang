@@ -1,5 +1,5 @@
 # ProgLang
 Contributors:
-Aadhthya Ramesh \n
-Abhiramon Rajashekaran \n
-Rakshith Potluri \n
+Aadhthya Ramesh,
+Abhiramon Rajashekaran,
+Rakshith Potluri.
