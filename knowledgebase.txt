@@ -1,3 +1,4 @@
+0_0_First Question_
 1_6_Did the accused perpetrate intentional infringement of copyright?_intentional infringement,infringement,copyright,commit
 2_6_Did the accused encourage infringement of copyright?_infringement,encourage,support,copyright
 1.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
@@ -6,8 +7,7 @@
 3_8_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?_tools,machinery,machine,plates,possess,use,infringed copies,copy
 4_5_Did the accused circumvent or find loopholes in technological measures set up to protect copyrights?_unlawful,circumvent,loopholes,way around,technological measures
 4.1_6_Did the accused circumvent technological measures unlawfully ( i.e without authorization of it's owner)?_unlawful,circumvent,loopholes,way around,technological measures,without permission
-5_11_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works._RMI,Rights Management Inf
-ormation,alter,remove,change,publish,address,name,terms,conditions,code
+5_11_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works._RMI,Rights Management Information,alter,remove,change,publish,address,name,terms,conditions,code
 6_6_Did the accused write or cause a false entry to be made in the register of copyrights?_false,information,register,wrong,result,cause
 7_7_Did the accused make or support any false statements to deceive an authority in order to tamper with the provisions given by the Copyright Act?_false,statements,deceive,influence,authority,officer,provisions
 8_10_Did the accused publish any sound recordings or videos without proper credit or permission from the copyrighted owner?_permission,credit,sound,video,license,owner,illegal,unlawful,particulars,name and address

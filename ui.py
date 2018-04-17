@@ -15,28 +15,28 @@ def testGraph():
 	return Graph([n1,nc1,nc2,p1,p2])
 
 def queryBot(graph):
-	print "Welcome to Legal solutions !!\n"
+	print("Welcome to Legal solutions !!\n")
 	node = graph.nodes[graph.root_index]
 	while (node.is_leaf == False):
 		print(node.question)
-		res = raw_input()
+		res = input()
 		if (res == "yes"):
 			if (node.children[0].is_leaf == True):
 				node = node.children[0]
 				break
-			print "Describe your problem further in the above category."
-			description = raw_input()
+			print("Describe your problem further in the above category.")
+			description = input()
 			child_node,status = node.find_child(description)
 			if (status):
 				node = child_node
-		
-		elif (res == "no"):	
-			print "Couldn't find a match."
+
+		elif (res == "no"):
+			print("Couldn't find a match.")
 		else :
-			print "enter yes or no."
-	
+			print("enter yes or no.")
+
 	if (node.is_leaf):
-		print node.question
+		print(node.question)
 
 
 
