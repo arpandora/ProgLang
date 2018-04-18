@@ -1,16 +1,16 @@
 0_0_Is the case related to copyright infringement?_
-1_6_Did the accused perpetrate intentional infringement of copyright?_intentional infringement,infringement,copyright,commit
+1_6_Did the accused perpetrate intentional infringement of copyright?_intentional,infringement,copyright,commit
 2_6_Did the accused encourage infringement of copyright?_infringement,encourage,support,copyright
 1.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
 2.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
-2.2_8_Was the accused aware of use of infringed copy of a computer program?_know,knew,use,infringed copy,copy,computer program,program,aware
+2.2_8_Was the accused aware of use of infringed copy of a computer program?_know,knew,use,infringed,copy,computer,program,aware
 3_8_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?_tools,machinery,machine,plates,possess,use,infringed copies,copy
-4_5_Did the accused circumvent or find loopholes in technological measures set up to protect copyrights?_unlawful,circumvent,loopholes,way around,technological measures
-4.1_6_Did the accused circumvent technological measures unlawfully ( i.e without authorization of it's owner)?_unlawful,circumvent,loopholes,way around,technological measures,without permission
-5_11_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works._RMI,Rights Management Information,alter,remove,change,publish,address,name,terms,conditions,code
+4_5_Did the accused circumvent or find loopholes in technological measures set up to protect copyrights?_unlawful,circumvent,loopholes,technological,measures
+4.1_6_Did the accused circumvent technological measures unlawfully ( i.e without authorization of it's owner)?_unlawful,circumvent,loopholes,technological,measures,without,permission
+5_11_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works._RMI,Rights,Management,Information,alter,remove,change,publish,address,name,terms,conditions,code
 6_6_Did the accused write or cause a false entry to be made in the register of copyrights?_false,information,register,wrong,result,cause
 7_7_Did the accused make or support any false statements to deceive an authority in order to tamper with the provisions given by the Copyright Act?_false,statements,deceive,influence,authority,officer,provisions
-8_10_Did the accused publish any sound recordings or videos without proper credit or permission from the copyrighted owner?_permission,credit,sound,video,license,owner,illegal,unlawful,particulars,name and address
+8_10_Did the accused publish any sound recordings or videos without proper credit or permission from the copyrighted owner?_permission,credit,sound,video,license,owner,illegal,unlawful,particulars,name,address
 9_6_Was a company(a firm or association of firms) responsible for copyright infringement?_company,copyright,firm,association,corporate,infringement
 9.1_11_Was the offense committed with the consent or is attributable to the negligence of the owner or any other officer of company?_owner,director,manager,secretary,officer,guilty,negligence,consent,connivance,company,firm
 1.1.1_0_Imprisonment for a term which shall not be less than six months and may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees._
