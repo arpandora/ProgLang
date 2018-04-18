@@ -1,4 +1,4 @@
-0_0_First Question_
+0_0_Is the case related to copyright infringement?_
 1_6_Did the accused perpetrate intentional infringement of copyright?_intentional infringement,infringement,copyright,commit
 2_6_Did the accused encourage infringement of copyright?_infringement,encourage,support,copyright
 1.1_6_Did the accused have any prior copyright infringement convictions?_prior,convictions,copyright,infringement,second,subsequent
