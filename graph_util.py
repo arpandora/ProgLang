@@ -70,7 +70,7 @@ class Graph:
 
 			else:
 
-				node = Node(row[1]["Question"], [], [])
+				node = Node(row[1]["Question"], [], [], _is_leaf = True)
 
 			rows[row[1]["ID"]] = node
 			rows[parent_index].children.append(node)

@@ -1,14 +1,14 @@
 from graph_util import *
 
 def main():
-	# graph = Graph()
-	# graph.make_graph("knowledgebase.txt")
-	graph = testGraph()
+	graph = Graph()
+	graph.make_graph("knowledgebase.txt")
+	# graph = testGraph()
 	queryBot(graph)
 
 def testGraph():
-	p1 = Node(_question = "The accused can be sentenced to 2 months in prison.",_is_leaf =True)
-	p2 = Node(_question = "The accused can be sentenced to 5 months in prison.",_is_leaf =True)
+	p1 = Node("The accused can be sentenced to 2 months in prison.",[],[],_is_leaf =True)
+	p2 = Node("The accused can be sentenced to 5 months in prison.",[],[],_is_leaf =True)
 	nc1 = Node ("Is your case related to literature copyright infringment?", ["book","paper","copied", "infringment"],[p1])
 	nc2 = Node ("Is your case related to music copyright infringment?",["music", "copied", "track","record"],[p2])
 	n1  = Node("Does your case fall into copyright cases?",["a","b"], [nc1,nc2])
