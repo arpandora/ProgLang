@@ -32,16 +32,17 @@ def get_similarity(keywords, sentence):
 			for synset in synsets:
 				max3 = 0
 				for synset2 in synsets2:
-					similarity = synset.path_similarity(synset2)
+					similarity = synset.wup_similarity(synset2)
 					if similarity is not None:
 						if (similarity>max3):
 							max3 = similarity
+							
+							# Uncomment this print statement to see matching :
+							print(synset, synset2, similarity)
+				
 				max1.append(max3)
 			max2.append(max(max1))
 
-
-			# Uncomment this print statement to see matching :
-			# print(synsets[0], synsets2[0], max2[-1])
 
 		if max2 == []:
 			best_score = 0
@@ -110,4 +111,4 @@ def wordnet_tag(tag):
 
 
 if __name__=="__main__":
-	print(get_similarity(["book","copied","paper","person"], "Someone replicated my records"))
+	print(get_similarity(["steal"], "Someone stole"))
