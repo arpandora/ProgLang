@@ -2,6 +2,7 @@
 
 import pandas as pd
 import re
+from nlp_util import *
 
 class Node:
 	def __init__(self,_question,_keywords, _children,  _is_leaf=False):
@@ -19,18 +20,15 @@ class Node:
 		# for word in words:
 
 		max_child = 0
-		max_matches = 0
+		max_match = 0
 		status = True
-		text_words = text.split()
 		for child in self.children :
-			count = 0
-			for word in child.keywords:
-				if word in text_words:
-					count+=1
-			if count > max_matches:
-				max_matches = count
+			similarity = get_similarity(child.keywords,text)
+			if similarity > max_match:
+				max_match = similarity
 				max_child = child
-		if max_matches==0:
+
+		if max_match==0:
 			status = False
 
 		return max_child, status

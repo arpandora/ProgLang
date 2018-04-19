@@ -5,10 +5,10 @@ from nltk.stem import WordNetLemmatizer
 
 def get_similarity(keywords, sentence):
 	# Returns score by matching keywords to sentence (including synonyms)
-	
+
 	score_cutoff = 0.3 #Minimum similarity to consider in score
 
-	tokens1 = word_tokenize(sentence)	
+	tokens1 = word_tokenize(sentence)
 	tagged_words1 = pos_tag(tokens1)
 	tagged_words1 = lemmatize(tagged_words1)
 
@@ -17,37 +17,46 @@ def get_similarity(keywords, sentence):
 	tagged_words2 = lemmatize(tagged_words2)
 
 	synsets_list1 =  synsets_from_pos(tagged_words1)
-	
+
 	synsets_list2 = synsets_from_pos(tagged_words2)
 
 
 	score, count = 0.0, 0
-	
+
 
 	for synsets in synsets_list2:
-		max1 = []
+
 		max2 = []
 		for synsets2 in synsets_list1:
+			max1 = []
 			for synset in synsets:
-				max1.append(max([synset.path_similarity(ss) for ss in synsets2]))
+				max3 = 0
+				for synset2 in synsets2:
+					similarity = synset.path_similarity(synset2)
+					if similarity is not None:
+						if (similarity>max3):
+							max3 = similarity
+				max1.append(max3)
 			max2.append(max(max1))
-		
 
-			# Uncomment this print statement to see matching : 
-			# print synsets[0], synsets2[0], max2[-1]
-		
 
-		best_score = max(max2)				 
+			# Uncomment this print statement to see matching :
+			# print(synsets[0], synsets2[0], max2[-1])
+
+		if max2 == []:
+			best_score = 0
+		else:
+			best_score = max(max2)
 
 		if best_score is not None and best_score >= score_cutoff:
 			score += best_score
 			count += 1
- 
-	
+
+
 	return score
 
 
-	
+
 
 def lemmatize(tagged_words):
 	lemmatizer = WordNetLemmatizer()
@@ -63,10 +72,10 @@ def lemmatize(tagged_words):
 	return ret_list
 
 def synsets_from_pos(tagged_words):
-	ret_list =[] 
+	ret_list =[]
 	for tagged_word in tagged_words:
 		synset = tag_to_synset(tagged_word[0],tagged_word[1])
-		if synset is not None:
+		if synset is not None and synset != []:
 			ret_list.append(synset)
 	return ret_list
 
@@ -76,7 +85,7 @@ def tag_to_synset(word,tag):
 	if wn_tag is None:
 		return None
 
-	
+
 	synsets = wn.synsets(word,wn_tag)
 
 	if (len(synsets)>0):
@@ -85,16 +94,16 @@ def tag_to_synset(word,tag):
 def wordnet_tag(tag):
     if tag.startswith('N'):
         return wn.NOUN
- 
+
     if tag.startswith('V'):
         return wn.VERB
- 
+
     if tag.startswith('J'):
         return wn.ADJ
- 
+
     if tag.startswith('R'):
         return wn.ADV
- 
+
     return None
 
 
@@ -102,4 +111,3 @@ def wordnet_tag(tag):
 
 if __name__=="__main__":
 	print(get_similarity(["book","copied","paper","person"], "Someone replicated my records"))
-	
