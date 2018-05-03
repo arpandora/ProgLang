@@ -31,9 +31,9 @@ def queryBot(graph):
 			print("Please enter further details related to your offence.\n")
 			description = input()
 			child_node_list,status = node.find_child(description)
-			if (status):
-				node_list = child_node_list
-				node = node_list[child_index]
+			# if (status):
+			node_list = child_node_list
+			node = node_list[child_index]
 
 
 		elif (res == "no"):
