@@ -10,14 +10,11 @@ def get_similarity(keywords, sentence):
 
 	tokens1 = word_tokenize(sentence)
 	tagged_words1 = pos_tag(tokens1)
-	print(tagged_words1)
 	tagged_words1 = lemmatize(tagged_words1)
-	print(tagged_words1)
 
 	tokens2 = keywords
 	tagged_words2 = pos_tag(tokens2)
 	tagged_words2 = lemmatize(tagged_words2)
-	print(tagged_words2)
 
 	synsets_list1 =  synsets_from_pos(tagged_words1)
 
@@ -41,7 +38,7 @@ def get_similarity(keywords, sentence):
 							max3 = similarity
 
 							# Uncomment this print statement to see matching :
-							print(synset, synset2, similarity)
+							# print(synset, synset2, similarity)
 
 				max1.append(max3)
 			max2.append(max(max1))
