@@ -10,11 +10,14 @@ def get_similarity(keywords, sentence):
 
 	tokens1 = word_tokenize(sentence)
 	tagged_words1 = pos_tag(tokens1)
+	print(tagged_words1)
 	tagged_words1 = lemmatize(tagged_words1)
+	print(tagged_words1)
 
 	tokens2 = keywords
 	tagged_words2 = pos_tag(tokens2)
 	tagged_words2 = lemmatize(tagged_words2)
+	print(tagged_words2)
 
 	synsets_list1 =  synsets_from_pos(tagged_words1)
 
@@ -32,14 +35,14 @@ def get_similarity(keywords, sentence):
 			for synset in synsets:
 				max3 = 0
 				for synset2 in synsets2:
-					similarity = synset.wup_similarity(synset2)
+					similarity = synset.path_similarity(synset2)
 					if similarity is not None:
 						if (similarity>max3):
 							max3 = similarity
-							
+
 							# Uncomment this print statement to see matching :
 							print(synset, synset2, similarity)
-				
+
 				max1.append(max3)
 			max2.append(max(max1))
 
@@ -102,13 +105,24 @@ def wordnet_tag(tag):
     if tag.startswith('J'):
         return wn.ADJ
 
+    if tag.startswith('CD'):
+        return wn.ADJ
+
     if tag.startswith('R'):
         return wn.ADV
 
+
     return None
+
+def generate_key(passage):
+    pos_tagged_stream = pos_tag(word_tokenize(passage))
+    wordNet_tagged_stream = [(word,wordnet_tag(tag)) for (word,tag) in pos_tagged_stream if ((wordnet_tag(tag) != None) )]
+    keywords = list(set([ (word,tag) for (word,tag) in wordNet_tagged_stream]))
+
+    return keywords
 
 
 
 
 if __name__=="__main__":
-	print(get_similarity(["steal"], "Someone stole"))
+	print(get_similarity(["steal"], "Someone stole my music"))
