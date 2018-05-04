@@ -47,10 +47,11 @@ class Graph:
 	def make_graph(self, questions_filename, content_filename):
 
 		# knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "NOKeys", "Question", "Keywords"])
-		knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "NOKeys", "Question"])
+		knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "Question"])
 		keywords = pd.read_csv(content_filename,sep = "_", names = ["ID", "Keywords"])
 		knowledge_base["Keywords"] = keywords["Keywords"]
 		knowledge_base = knowledge_base.fillna(0)
+		print(knowledge_base)
 		parent_index = None
 		node = None
 		rows = {}
