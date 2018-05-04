@@ -1,6 +1,5 @@
-1. Use pickle to store and read graph object
-2. Modify make graph for more than 10 children reading index.
-3. Change knowledge base using Anvita's pdf
-4. Add keyword generator  
-5. Make methods to add/delete knowledge base entries
-6. Expand to trademark and section 7 and 8
+1. Add questions using Anvita's pdf
+2. Add passages for questions
+3. Put code in directories and complie using Makefile
+4. Add requirements.pip
+5. improve UI visually (optional)
