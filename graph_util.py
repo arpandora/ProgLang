@@ -33,8 +33,10 @@ class Node:
 		if max_match==0:
 			status = False
 
-
-		return sorted(similarities, key = lambda x : x[1]), status
+		sorted_similarity = sorted(similarities, key = lambda x : x[1])
+		sorted_children = [i[1] for i in similarities]
+		print(sorted_children)
+		return sorted_children, status
 
 
 
@@ -51,7 +53,7 @@ class Graph:
 		keywords = pd.read_csv(content_filename,sep = "_", names = ["ID", "Keywords"])
 		knowledge_base["Keywords"] = keywords["Keywords"]
 		knowledge_base = knowledge_base.fillna(0)
-		print(knowledge_base)
+		# print(knowledge_base)
 		parent_index = None
 		node = None
 		rows = {}
@@ -71,7 +73,7 @@ class Graph:
 			else:
 				parent_index = ".".join(split_index)
 
-			print(parent_index)
+			# print(parent_index)
 
 
 
@@ -95,6 +97,6 @@ if __name__ == "__main__":
 
 	graph = Graph()
 	graph.make_graph("test_questions.txt", "test_passage.txt")
-	for node in graph.nodes:
-		for child in node.children:
-			print(child.question)
+	# for node in graph.nodes:
+	# 	for child in node.children:
+	# 		print(child.question)
