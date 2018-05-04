@@ -121,14 +121,16 @@ def updateKB(knowledge_base):
                     else:
                         prevIndex = chosenIndex
 
-                    print(prevIndex,"--. splitIndex")
                     splitIndex = knowledge_base.index.get_loc(prevIndex) + 1
 
+                    newStatus = ""
+                    while (not (newStatus == "Yes" or newStatus == "No")):
+                        newStatus = input("Is this node a leaf? : (Enter Yes or No)")
 
                     newQuestion = input("Enter Question : ")
                     newPassage = input("Enter Passage : ")
 
-                    newRow = pd.DataFrame({"ID": newIndex, "Question":newQuestion , "Passage":newPassage}, index=[newIndex])
+                    newRow = pd.DataFrame({"ID": newIndex,"IsLeaf": (1 if newStatus=="Yes" else 0), "Question":newQuestion , "Passage":newPassage}, index=[newIndex])
                     knowledge_base = pd.concat([knowledge_base.ix[:splitIndex], newRow, knowledge_base.ix[splitIndex:]])
                     knowledge_base['qID'] = knowledge_base['ID']
                     knowledge_base.set_index("qID", inplace=True)
@@ -164,14 +166,12 @@ def updateKB(knowledge_base):
                 except KeyError:
                     print("Index Not Found - Try Again")
 
-            print('\n\n',"Deletion Successful","\n\n")
-
     return knowledge_base
 
 
 if __name__ == '__main__':
 
-    knowledge_base_questions = pd.read_csv("test_questions.txt",sep = "_", names = ["ID", "Question"])
+    knowledge_base_questions = pd.read_csv("test_questions.txt",sep = "_", names = ["ID", "IsLeaf", "Question"])
     knowledge_base_passage = pd.read_csv("test_passage.txt",sep = "_", names = ["ID", "Passage"])
     knowledge_base = knowledge_base_questions
     knowledge_base['Passage'] = knowledge_base_passage["Passage"]
@@ -180,8 +180,8 @@ if __name__ == '__main__':
     knowledge_base.set_index("qID", inplace=True)
 
     updatedKB = updateKB(knowledge_base)
-    updatedKB_Questions = updatedKB[['ID','Question']]
+    updatedKB_Questions = updatedKB[['ID','IsLeaf','Question']]
     updatedKB_Passage = updatedKB[['ID','Passage']]
 
-    updatedKB_Questions.to_csv("updatedKB_Questions.txt",sep="_",header = False , index = False)
-    updatedKB_Passage.to_csv("updatedKB_Passage.txt",sep="_",header = False , index = False)
+    updatedKB_Questions.to_csv("test_questions.txt",sep="_",header = False , index = False)
+    updatedKB_Passage.to_csv("test_passage.txt",sep="_",header = False , index = False)
