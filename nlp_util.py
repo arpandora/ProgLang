@@ -12,9 +12,9 @@ def get_similarity(keywords, sentence):
 	tagged_words1 = pos_tag(tokens1)
 	tagged_words1 = lemmatize(tagged_words1)
 
+
 	tokens2 = keywords
-	tagged_words2 = pos_tag(tokens2)
-	tagged_words2 = lemmatize(tagged_words2)
+	tagged_words2 = lemmatize(tokens2)
 
 	synsets_list1 =  synsets_from_pos(tagged_words1)
 

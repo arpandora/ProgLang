@@ -34,8 +34,8 @@ class Node:
 			status = False
 
 		sorted_similarity = sorted(similarities, key = lambda x : x[1])
-		sorted_children = [i[1] for i in similarities]
-		print(sorted_children)
+		sorted_children = [i[0] for i in similarities]
+		# print(sorted_children)
 		return sorted_children, status
 
 
@@ -49,7 +49,7 @@ class Graph:
 	def make_graph(self, questions_filename, content_filename):
 
 		# knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "NOKeys", "Question", "Keywords"])
-		knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "Question"])
+		knowledge_base = pd.read_csv(questions_filename,sep = "_", names = ["ID", "Isleaf", "Question"])
 		keywords = pd.read_csv(content_filename,sep = "_", names = ["ID", "Keywords"])
 		knowledge_base["Keywords"] = keywords["Keywords"]
 		knowledge_base = knowledge_base.fillna(0)
@@ -77,7 +77,7 @@ class Graph:
 
 
 
-			if row[1]["Keywords"] != 0:
+			if row[1]["Isleaf"] == 0:
 
 				keywords = generate_key(row[1]["Keywords"])
 				# node = Node(row[1]["Question"], row[1]["Keywords"].split(","), [])
@@ -97,6 +97,10 @@ if __name__ == "__main__":
 
 	graph = Graph()
 	graph.make_graph("test_questions.txt", "test_passage.txt")
-	# for node in graph.nodes:
-	# 	for child in node.children:
-	# 		print(child.question)
+	for node in graph.nodes:
+		for child in node.children:
+			print(child.question)
+			if child.is_leaf:
+				print ("The node is a leaf")
+			else:
+				print ("The node is not a leaf")
