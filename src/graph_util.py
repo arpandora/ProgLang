@@ -11,6 +11,7 @@ class Node:
 		self.parent = _parent
 		self.children = _children
 		self.is_leaf = _is_leaf
+		self.sorted_children = _children
 
 	def find_child(self, text):
 
@@ -33,9 +34,10 @@ class Node:
 		if max_match==0:
 			status = False
 
-		sorted_similarity = sorted(similarities, key = lambda x : x[1])
+		sorted_similarity = sorted(similarities, key = lambda x : x[1], reverse = True)
 		sorted_children = [i[0] for i in similarities]
 		# print(sorted_children)
+		self.sorted_children = sorted_children
 		return sorted_children, status
 
 

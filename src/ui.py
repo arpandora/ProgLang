@@ -3,13 +3,18 @@ from graph_util import *
 def main():
 	graph = Graph()
 	#Modify this line when running this program from inside the src file
-	graph.make_graph("data/questions.txt","data/passages.txt")
-	queryBot(graph)
-
-
-def queryBot(graph):
+	graph.make_graph("data/test_questions.txt","data/test_passages.txt")
 	print("Hi, I am Sunvai, an artificially intelligent bot to guide you with your case.\nPlease tell me your name: ")
 	user_name = input()
+
+	repeat = "yes"
+	while(repeat == "yes"):
+		queryBot(graph, user_name)
+		print("Do you want to look up other sections?")
+		repeat = input()
+	print("All the best for the resolution of your case.")
+
+def queryBot(graph, user_name):
 	print("Hello "+user_name+", good to have you here.\n")
 	node_list = [graph.nodes[graph.root_index]]
 	node = node_list[0]
@@ -21,13 +26,13 @@ def queryBot(graph):
 			if (node.children[0].is_leaf == True):
 				node = node.children[0]
 				break
-			print("Please enter further details related to your offence. or enter options")
+			print("Please enter further details related to your offence or enter options.")
 			description = input()
 			while (description == "options"):
-				temp_node_list,status = node.find_child(description)
-				for n in temp_node_list:
+				# temp_node_list,status = node.find_child(description)
+				for n in node.children:
 					print(n.question)
-				print("Please enter further details related to your offence. or enter options")
+				print("Please enter further details related to your offence or enter options.")
 				description = input()
 			child_node_list,status = node.find_child(description)
 			# if (status):
@@ -44,7 +49,7 @@ def queryBot(graph):
 				print("No match was found")
 				if (node.parent != None):
 					if (node.parent.parent != None):
-						node_list = [n for n in node.parent.parent.children]
+						node_list = [n for n in node.parent.parent.sorted_children]
 					else:
 						node_list = [node.parent]
 				node = node_list[child_index]
@@ -54,7 +59,7 @@ def queryBot(graph):
 	if (node.is_leaf):
 		print("we have found a match for the case.")
 		print(node.question)
-		print("You can use the help of a lawyer to access the strength of your case.\nHope I helped. All the best for resolution of your case.")
+		print("You can use the help of a lawyer to access the strength of your case.\nHope I helped.")
 
 
 
