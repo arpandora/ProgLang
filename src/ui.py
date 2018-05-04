@@ -2,7 +2,8 @@ from graph_util import *
 
 def main():
 	graph = Graph()
-	graph.make_graph("../data/questions.txt","../data/passages.txt")
+	#Modify this line when running this program from inside the src file
+	graph.make_graph("data/questions.txt","data/passages.txt")
 	queryBot(graph)
 
 
