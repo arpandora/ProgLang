@@ -1,0 +1,11 @@
+0_0_Is the case related to copyright infringement?
+1_0_Did the accused perpetrate intentional infringement of copyright?
+1.1_0_Did the accused have any prior copyright infringement convictions?
+1.1.1_1_Imprisonment for a term which shall not be less than six months and may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
+2_0_Did the accused encourage infringement of copyright?
+2.1_0_Did the accused have any prior copyright infringement convictions?
+2.1.1_1_Imprisonment for a term which shall not be less than six months and may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
+2.2_0_Was the accused aware of use of infringed copy of a computer program?
+2.2.1_1_Imprisonment for a term which shall not be less than seven days but which may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
+3_0_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?
+3.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
