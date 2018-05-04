@@ -21,8 +21,14 @@ def queryBot(graph):
 			if (node.children[0].is_leaf == True):
 				node = node.children[0]
 				break
-			print("Please enter further details related to your offence.")
+			print("Please enter further details related to your offence. or enter options")
 			description = input()
+			while (description == "options"):
+				temp_node_list,status = node.find_child(description)
+				for n in temp_node_list:
+					print(n.question)
+				print("Please enter further details related to your offence. or enter options")
+				description = input()
 			child_node_list,status = node.find_child(description)
 			# if (status):
 			node_list = child_node_list
