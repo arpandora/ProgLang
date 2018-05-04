@@ -15,12 +15,6 @@ class Node:
 
 	def find_child(self, text):
 
-		# text = re.sub('[^0-9a-zA-Z]+', ' ', s)
-		# words = text.split()
-		# for child in self.children:
-		# 	keywords.append(child.keywords)
-		# for word in words:
-
 		max_child = 0
 		max_match = 0
 		status = True
@@ -28,15 +22,16 @@ class Node:
 		for child in self.children :
 			similarity = get_similarity(child.keywords,text)
 			similarities.append([child, similarity])
-			if similarity != 0:
-				max_match = 1
+			if similarity > max_match:
+				max_match = similarity
 
 		if max_match==0:
 			status = False
 
+
+
 		sorted_similarity = sorted(similarities, key = lambda x : x[1], reverse = True)
-		sorted_children = [i[0] for i in similarities]
-		# print(sorted_children)
+		sorted_children = [i[0] for i in sorted_similarity]
 		self.sorted_children = sorted_children
 		return sorted_children, status
 
@@ -98,11 +93,8 @@ class Graph:
 if __name__ == "__main__":
 
 	graph = Graph()
-	graph.make_graph("../data/questions.txt", "../data/passage.txt")
+	graph.make_graph("../data/questions.txt", "../data/passages.txt")
 	for node in graph.nodes:
 		for child in node.children:
 			print(child.question)
-			if child.is_leaf:
-				print ("The node is a leaf")
-			else:
-				print ("The node is not a leaf")
+			print (child.keywords)

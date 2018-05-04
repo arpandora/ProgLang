@@ -4,7 +4,7 @@ def main():
 	graph = Graph()
 	#Modify this line when running this program from inside the src file
 	graph.make_graph("data/questions.txt","data/passages.txt")
-	print("Hi, I am Sunvai, an artificially intelligent bot to guide you with your case.\nPlease tell me your name: ")
+	print("Hi, I am Sunvai, a query bot to guide you with your case.\nPlease tell me your name: ")
 	user_name = input()
 
 	repeat = "yes"
@@ -20,7 +20,7 @@ def queryBot(graph, user_name):
 	node = node_list[0]
 	child_index = 0
 	while (node.is_leaf == False):
-		print(node.question)
+		print("\n"+node.question)
 		res = input()
 		if (res == "yes"):
 			if (node.children[0].is_leaf == True):
@@ -34,9 +34,9 @@ def queryBot(graph, user_name):
 					print(n.question)
 				print("Please enter further details related to your offence or enter options.")
 				description = input()
-			child_node_list,status = node.find_child(description)
-			# if (status):
-			node_list = child_node_list
+			
+			node_list,status = node.find_child(description)
+			child_index = 0
 			node = node_list[child_index]
 
 
@@ -46,7 +46,10 @@ def queryBot(graph, user_name):
 				node = node_list[child_index]
 			else :
 				child_index = 0
-				print("No match was found")
+				print("No match was found, backtracking ...")
+				print ("Enter exit to exit the program.")
+				if (input() == "exit"):
+					quit()
 				if (node.parent != None):
 					if (node.parent.parent != None):
 						node_list = [n for n in node.parent.parent.sorted_children]
@@ -57,9 +60,9 @@ def queryBot(graph, user_name):
 			print("please enter yes or no.")
 
 	if (node.is_leaf):
-		print("we have found a match for the case.")
+		print("we have found a match for the case.\n")
 		print(node.question)
-		print("You can use the help of a lawyer to access the strength of your case.\nHope I helped.")
+		print("You can use the help of a lawyer to access the strength of your case.\nHope I helped.\n--------------------------------------------------------------\n")
 
 
 

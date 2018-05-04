@@ -14,8 +14,8 @@ def get_similarity(keywords, sentence):
 
 
 	tokens2 = keywords
-	tagged_words2 = lemmatize(tokens2)
 
+	tagged_words2 = lemmatize(tokens2)
 	synsets_list1 =  synsets_from_pos(tagged_words1)
 
 	synsets_list2 = synsets_from_pos(tagged_words2)
@@ -93,19 +93,19 @@ def tag_to_synset(word,tag):
 		return synsets
 
 def wordnet_tag(tag):
-    if tag.startswith('N'):
+    if tag.startswith('N') or tag.startswith('n'):
         return wn.NOUN
 
-    if tag.startswith('V'):
+    if tag.startswith('V') or tag.startswith('v'):
         return wn.VERB
 
-    if tag.startswith('J'):
+    if tag.startswith('J') or tag.startswith('j'):
         return wn.ADJ
 
     if tag.startswith('CD'):
         return wn.ADJ
 
-    if tag.startswith('R'):
+    if tag.startswith('R') or tag.startswith('r'):
         return wn.ADV
 
 
