@@ -1,0 +1,13 @@
+0_0_Is there anything more I can help you with?
+1_0_Do you think that your copyright is infringed?
+2_1_row 20
+1.1_0_Did your copyright exist prior to the work that you suspect infringing your copyright?
+1.2_1_You don't have a copyright infringement case.
+1.1.1_0_Did the other author have access to your copyrighted work?
+1.1.2_1_row 15
+1.1.1.1_0_under section 63 CopyrightAct,1957, this is a case of intentional infringement or abetment of the infringement of the copyright in a work. Is this a second or subsequent conviction for the author?
+1.1.1.1.1_1_Section 63A
+1.1.1.1.2_0_Is it related to knowing use of infringing copy of computer program?
+1.1.1.1.2.2_1_row 15
+1.1.1.1.2.1_0_It comes under section 63B. You may speak to the person directly to clarify, or with the help of a lawyer to assess the strength of you case. If your lawyer is confident, you may send a legal notice to the other person. Is there anything else I can help you with?
+1.1.1.1.2.1.1_0_Please describe more details related to the offence.
