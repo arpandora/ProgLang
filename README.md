@@ -26,5 +26,5 @@ Run the program using the command : "./run.sh"
 
 ## Contributors
 Aadhithya Ramesh,
-Abhiramon Rajashekaran,
+Abhiramon Rajasekharan,
 Rakshith Potluri.
