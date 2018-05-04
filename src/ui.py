@@ -3,7 +3,7 @@ from graph_util import *
 def main():
 	graph = Graph()
 	#Modify this line when running this program from inside the src file
-	graph.make_graph("data/test_questions.txt","data/test_passages.txt")
+	graph.make_graph("data/questions.txt","data/passages.txt")
 	print("Hi, I am Sunvai, an artificially intelligent bot to guide you with your case.\nPlease tell me your name: ")
 	user_name = input()
 

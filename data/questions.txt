@@ -1,25 +1,21 @@
 0_0_Is the case related to copyright infringement?
-1_0_Did the accused perpetrate intentional infringement of copyright?
+1_0_Did the accused perpetrate or encourage intentional infringement of copyright?
 1.1_0_Did the accused have any prior copyright infringement convictions?
 1.1.1_1_Imprisonment for a term which shall not be less than six months and may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
-2_0_Did the accused encourage infringement of copyright?
-2.1_0_Did the accused have any prior copyright infringement convictions?
-2.1.1_1_Imprisonment for a term which shall not be less than six months and may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
-2.2_0_Was the accused aware of use of infringed copy of a computer program?
-2.2.1_1_Imprisonment for a term which shall not be less than seven days but which may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
-3_0_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?
+2_0_Did the accused possess any tool(s) or plate(s) which could help in making infringed copies?
+2.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
+3_0_Did the accused circumvent or find loopholes in technological measures set up to protect copyrights?
 3.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
-4_0_Did the accused circumvent or find loopholes in technological measures set up to protect copyrights?
-4.1_0_Did the accused circumvent technological measures unlawfully ( i.e without authorization of it's owner)?
-4.1.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
-5_0_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works.
-5.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
-6_0_Did the accused write or cause a false entry to be made in the register of copyrights?
+4_0_Did the accused alter or remove any RMI information or publish,distribute any such works. RMI means information such as name of the owner or terms and conditions of copyrighted works.
+4.1_1_Imprisonment which may extend to two years and shall also be liable to fine.
+5_0_Did the accused write or cause a false entry to be made in the register of copyrights?
+5.1_1_Imprisonment which may extend to one year or with fine or both.
+6_0_Did the accused make or support any false statements to deceive an authority in order to tamper with the provisions given by the Copyright Act?
 6.1_1_Imprisonment which may extend to one year or with fine or both.
-7_0_Did the accused make or support any false statements to deceive an authority in order to tamper with the provisions given by the Copyright Act?
-7.1_1_Imprisonment which may extend to one year or with fine or both.
-8_0_Did the accused publish any sound recordings or videos without proper credit or permission from the copyrighted owner?
-8.1_1_Imprisonment which may extend to three years and shall also be liable to fine.
-9_0_Was a company(a firm or association of firms) responsible for copyright infringement?
-9.1_0_Was the offense committed with the consent or is attributable to the negligence of the owner or any other officer of company?
-9.1.1_1_All officers of the company shall also be deemed to be guilty of that offense and shall be liable to be proceeded against and punished accordingly.
+7_0_Did the accused publish any sound recordings or videos without proper credit or permission from the copyrighted owner?
+7.1_1_Imprisonment which may extend to three years and shall also be liable to fine.
+8_0_Was a company(a firm or association of firms) responsible for copyright infringement?
+8.1_0_Was the offense committed with the consent or is attributable to the negligence of the owner or any other officer of company?
+8.1.1_1_All officers of the company shall also be deemed to be guilty of that offense and shall be liable to be proceeded against and punished accordingly.
+9_0_Was the accused aware of use of infringed copy of a computer program?
+9.1_1_Imprisonment for a term which shall not be less than seven days but which may extend to three years and with fine which shall not be less than fifty thousand rupees but which may extend to two lakh rupees.
