@@ -96,7 +96,7 @@ class Graph:
 if __name__ == "__main__":
 
 	graph = Graph()
-	graph.make_graph("test_questions.txt", "test_passage.txt")
+	graph.make_graph("../data/questions.txt", "../data/passage.txt")
 	for node in graph.nodes:
 		for child in node.children:
 			print(child.question)

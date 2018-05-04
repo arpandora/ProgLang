@@ -2,7 +2,7 @@ from graph_util import *
 
 def main():
 	graph = Graph()
-	graph.make_graph("test_questions.txt","test_passage.txt")
+	graph.make_graph("../data/questions.txt","../data/passages.txt")
 	queryBot(graph)
 
 

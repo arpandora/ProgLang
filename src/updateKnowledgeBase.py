@@ -171,8 +171,8 @@ def updateKB(knowledge_base):
 
 if __name__ == '__main__':
 
-    knowledge_base_questions = pd.read_csv("test_questions.txt",sep = "_", names = ["ID", "IsLeaf", "Question"])
-    knowledge_base_passage = pd.read_csv("test_passage.txt",sep = "_", names = ["ID", "Passage"])
+    knowledge_base_questions = pd.read_csv("../data/questions.txt",sep = "_", names = ["ID", "IsLeaf", "Question"])
+    knowledge_base_passage = pd.read_csv("../data/passages.txt",sep = "_", names = ["ID", "Passage"])
     knowledge_base = knowledge_base_questions
     knowledge_base['Passage'] = knowledge_base_passage["Passage"]
     knowledge_base = knowledge_base.fillna(0)
@@ -183,5 +183,5 @@ if __name__ == '__main__':
     updatedKB_Questions = updatedKB[['ID','IsLeaf','Question']]
     updatedKB_Passage = updatedKB[['ID','Passage']]
 
-    updatedKB_Questions.to_csv("test_questions.txt",sep="_",header = False , index = False)
-    updatedKB_Passage.to_csv("test_passage.txt",sep="_",header = False , index = False)
+    updatedKB_Questions.to_csv("../data/questions.txt",sep="_",header = False , index = False)
+    updatedKB_Passage.to_csv("../data/passages.txt",sep="_",header = False , index = False)
